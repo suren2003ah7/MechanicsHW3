@@ -1,25 +1,33 @@
 import java.util.*;
 
-public class Course {
+public class Course 
+{
 		
 	public Vector<Course> clashesWith;
-	public int mySlot, force;
+
+	public int mySlot;
 	
-	public Course() {
+	public int force;
+	
+	public Course() 
+	{
 		clashesWith = new Vector<Course>();
 		mySlot = 0;
 	}
 	
-	public Course(int newSlot) {
+	public Course(int newSlot) 
+	{
 		clashesWith = new Vector<Course>();
 		mySlot = newSlot;
 	}
 	
-	public void addClash(Course thatClash) {
+	public void addClash(Course thatClash) 
+	{
 		clashesWith.add(thatClash);
 	}
 	
-	public int clashSize() {
+	public int clashSize() 
+	{
 		int result = 0;
 		for (int i = 0; i < clashesWith.size(); i++) 
 			if (mySlot == clashesWith.elementAt(i).mySlot) 
@@ -27,7 +35,8 @@ public class Course {
 		return result;
 	}
 	
-	public int unitClashForce() {
+	public int unitClashForce() 
+	{
 		for (int i = 0; i < clashesWith.size(); i++)
 			if (mySlot == clashesWith.elementAt(i).mySlot) 
 				return 1;
@@ -35,11 +44,13 @@ public class Course {
 		return 0;
 	}
 	
-	public void setForce() {
+	public void setForce() 
+	{
 		force = unitClashForce();
 	}
 	
-	public void shift(int limit) {
+	public void shift(int limit) 
+	{
 		mySlot += force;
 		if (mySlot < 0) {
 			mySlot = limit - 1;
