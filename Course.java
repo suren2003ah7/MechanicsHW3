@@ -29,18 +29,25 @@ public class Course
 	public int clashSize() 
 	{
 		int result = 0;
-		for (int i = 0; i < clashesWith.size(); i++) 
-			if (mySlot == clashesWith.elementAt(i).mySlot) 
+		for (int i = 0; i < clashesWith.size(); i++)
+		{
+			if (mySlot == clashesWith.elementAt(i).mySlot)
+			{
 				result++;
+			}
+		}
 		return result;
 	}
 	
 	public int unitClashForce() 
 	{
 		for (int i = 0; i < clashesWith.size(); i++)
-			if (mySlot == clashesWith.elementAt(i).mySlot) 
+		{
+			if (mySlot == clashesWith.elementAt(i).mySlot)
+			{
 				return 1;
-		
+			}
+		}
 		return 0;
 	}
 	
@@ -52,10 +59,12 @@ public class Course
 	public void shift(int limit) 
 	{
 		mySlot += force;
-		if (mySlot < 0) {
+		if (mySlot < 0) 
+		{
 			mySlot = limit - 1;
 		}
-		else if (mySlot >= limit) { 
+		else if (mySlot >= limit) 
+		{ 
 			mySlot = 0;
 		}
 	}
