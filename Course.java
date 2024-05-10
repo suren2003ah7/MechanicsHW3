@@ -68,4 +68,9 @@ public class Course
 			mySlot = 0;
 		}
 	}
+
+	public boolean isInTimeSlot(int timeSlot)
+	{
+		return mySlot == timeSlot;
+	}
 }

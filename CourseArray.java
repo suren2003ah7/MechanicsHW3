@@ -17,6 +17,21 @@ public class CourseArray
 			elements[i] = new Course();
 		}
 	}
+
+	public int[] getTimeSlot(int index)
+	{
+		int[] timeSlot = new int[elements.length];
+		for (int i = 0; i < timeSlot.length; i++)
+		{
+			if (elements[i].isInTimeSlot(index))
+			{
+				timeSlot[i] = 1;
+				continue;
+			}
+			timeSlot[i] = -1;
+		}
+		return timeSlot;
+	}
 	
 	public void readClashes(String filename) 
 	{
