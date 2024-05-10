@@ -1,0 +1,87 @@
+File: uta-s-92
+Time slots: 30
+
+shift | iteration | result
+1       100         Min clashes = 24038     at step 100
+1       1000        Min clashes = 20608     at step 125
+1       10000       Min clashes = 20608     at step 125
+5       100         Min clashes = 866       at step 29
+5       1000        Min clashes = 866       at step 29
+5       10000       Min clashes = 866       at step 29
+10      100         Min clashes = 628       at step 16
+10      1000        Min clashes = 628       at step 16
+10      10000       Min clashes = 628       at step 16
+15      100         Min clashes = 598       at step 14
+15      1000        Min clashes = 598       at step 14
+15      10000       Min clashes = 598       at step 14
+20      100         Min clashes = 568       at step 57
+20      1000        Min clashes = 568       at step 57
+20      10000       Min clashes = 568       at step 57
+25      100         Min clashes = 454       at step 49
+25      1000        Min clashes = 454       at step 49
+25      10000       Min clashes = 454       at step 49
+30      100         Min clashes = 950       at step 1
+30      1000        Min clashes = 950       at step 1
+30      10000       Min clashes = 950       at step 1
+35      100         Min clashes = 330       at step 64
+35      1000        Min clashes = 330       at step 64
+35      10000       Min clashes = 330       at step 64 
+40      100         Min clashes = 568       at step 37
+40      1000        Min clashes = 568       at step 37
+40      10000       Min clashes = 568       at step 37
+45      100         Min clashes = 588       at step 14
+45      1000        Min clashes = 588       at step 14
+45      10000       Min clashes = 588       at step 14
+50      100         Min clashes = 528       at step 33
+50      1000        Min clashes = 528       at step 33
+50      10000       Min clashes = 528       at step 33
+55      100         Min clashes = 408       at step 54
+55      1000        Min clashes = 408       at step 54
+55      10000       Min clashes = 408       at step 54
+60      100         Min clashes = 950       at step 1
+60      1000        Min clashes = 950       at step 1
+60      10000       Min clashes = 950       at step 1
+
+File: sta-f-83
+Time slots: 13
+
+shift | iteration | result
+1       100         Min clashes = 0 at step 12
+1       1000        Min clashes = 0 at step 12
+1       10000       Min clashes = 0 at step 12
+3       100         Min clashes = 0 at step 4
+3       1000        Min clashes = 0 at step 4
+3       10000       Min clashes = 0 at step 4
+5       100         Min clashes = 0 at step 3
+5       1000        Min clashes = 0 at step 3
+5       10000       Min clashes = 0 at step 3
+7       100         Min clashes = 0 at step 2
+7       1000        Min clashes = 0 at step 2
+7       10000       Min clashes = 0 at step 2
+9       100         Min clashes = 0 at step 2
+9       1000        Min clashes = 0 at step 2
+9       10000       Min clashes = 0 at step 2
+11      100         Min clashes = 0 at step 2
+11      1000        Min clashes = 0 at step 2
+11      10000       Min clashes = 0 at step 2
+13      100         Min clashes = 0 at step 1
+13      1000        Min clashes = 0 at step 1
+13      10000       Min clashes = 0 at step 1
+15      100         Min clashes = 0 at step 1
+15      1000        Min clashes = 0 at step 1
+15      10000       Min clashes = 0 at step 1
+17      100         Min clashes = 0 at step 1
+17      1000        Min clashes = 0 at step 1
+17      10000       Min clashes = 0 at step 1
+19      100         Min clashes = 0 at step 1
+19      1000        Min clashes = 0 at step 1
+19      10000       Min clashes = 0 at step 1
+21      100         Min clashes = 0 at step 1
+21      1000        Min clashes = 0 at step 1
+21      10000       Min clashes = 0 at step 1
+23      100         Min clashes = 0 at step 1
+23      1000        Min clashes = 0 at step 1
+23      10000       Min clashes = 0 at step 1
+25      100         Min clashes = 0 at step 1
+25      1000        Min clashes = 0 at step 1
+25      10000       Min clashes = 0 at step 1
