@@ -1,0 +1,70 @@
+File: uta-s-92
+Time slots: 30
+
+Update period - 10
+Update count - 10
+shift | iteration | result
+1       1000        Min clashes = 3298      at step 843
+5       1000        Min clashes = 356       at step 372
+10      1000        Min clashes = 250       at step 554
+15      1000        Min clashes = 332       at step 801
+20      1000        Min clashes = 224       at step 926
+25      1000        Min clashes = 248       at step 418
+30      1000        Min clashes = 890       at step 51
+35      1000        Min clashes = 230       at step 182
+40      1000        Min clashes = 190       at step 739 // the best
+45      1000        Min clashes = 336       at step 107
+50      1000        Min clashes = 230       at step 863
+55      1000        Min clashes = 224       at step 992
+60      1000        Min clashes = 868       at step 111
+
+Update period - 10
+Update count - 100
+shift | iteration | result
+1       1000        Min clashes = 3356      at step 991
+5       1000        Min clashes = 402       at step 29
+10      1000        Min clashes = 296       at step 104
+15      1000        Min clashes = 248       at step 830
+20      1000        Min clashes = 286       at step 106
+25      1000        Min clashes = 288       at step 65
+30      1000        Min clashes = 558       at step 981
+35      1000        Min clashes = 298       at step 819
+40      1000        Min clashes = 206       at step 155
+45      1000        Min clashes = 230       at step 463
+50      1000        Min clashes = 206       at step 512
+55      1000        Min clashes = 258       at step 34
+60      1000        Min clashes = 606       at step 861
+
+Update period - 100
+Update count - 10
+shift | iteration | result
+1       1000        Min clashes = 4896      at step 943 // the worst
+5       1000        Min clashes = 300       at step 634
+10      1000        Min clashes = 358       at step 254
+15      1000        Min clashes = 432       at step 804
+20      1000        Min clashes = 352       at step 627
+25      1000        Min clashes = 454       at step 49
+30      1000        Min clashes = 904       at step 101
+35      1000        Min clashes = 330       at step 64
+40      1000        Min clashes = 358       at step 841
+45      1000        Min clashes = 490       at step 563
+50      1000        Min clashes = 264       at step 791
+55      1000        Min clashes = 252       at step 593
+60      1000        Min clashes = 886       at step 101
+
+Update period - 2
+Update count - 10
+shift | iteration | result
+1       1000        Min clashes = 2562      at step 642
+5       1000        Min clashes = 468       at step 103
+10      1000        Min clashes = 414       at step 924
+15      1000        Min clashes = 240       at step 856
+20      1000        Min clashes = 252       at step 208
+25      1000        Min clashes = 218       at step 127
+30      1000        Min clashes = 682       at step 991
+35      1000        Min clashes = 266       at step 51
+40      1000        Min clashes = 206       at step 446
+45      1000        Min clashes = 202       at step 823
+50      1000        Min clashes = 286       at step 978
+55      1000        Min clashes = 204       at step 132
+60      1000        Min clashes = 686       at step 897
