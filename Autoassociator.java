@@ -77,7 +77,7 @@ public class Autoassociator
 		// implements a single update step and
 		// returns the index of the randomly selected and updated neuron
 
-		int indexOfNeuronToBeUpdated = (int) (Math.floor(Math.random() * neurons.length));
+		int indexOfNeuronToBeUpdated = (int) (Math.floor(Math.random() * (neurons.length - 1)) + 1);
 		unitUpdate(neurons, indexOfNeuronToBeUpdated);
 		return indexOfNeuronToBeUpdated;
 	}
