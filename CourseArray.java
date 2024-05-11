@@ -21,7 +21,7 @@ public class CourseArray
 	public int[] getTimeSlot(int index)
 	{
 		int[] timeSlot = new int[elements.length];
-		for (int i = 0; i < timeSlot.length; i++)
+		for (int i = 1; i < timeSlot.length; i++)
 		{
 			if (elements[i].isInTimeSlot(index))
 			{

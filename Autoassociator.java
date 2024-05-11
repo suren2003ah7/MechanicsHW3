@@ -5,7 +5,7 @@ public class Autoassociator
 
 	private int[][] weights;
 
-	private final int trainingCapacity;
+	private int trainingCapacity;
 	
 	public Autoassociator(CourseArray courses) 
 	{
@@ -27,9 +27,9 @@ public class Autoassociator
 	{
 		// TO DO
 
-		for (int i = 0; i < weights.length; i++)
+		for (int i = 1; i < weights.length; i++)
 		{
-			for (int j = 0; j < weights.length; j++)
+			for (int j = 1; j < weights.length; j++)
 			{
 				if (isDiagonalElement(i, j))
 				{
@@ -38,6 +38,7 @@ public class Autoassociator
 				weights[i][j] += (pattern[i] * pattern[j]);
 			}
 		}
+		trainingCapacity--;
 	}
 
 	public void fullUpdate(int neurons[]) 
@@ -91,9 +92,9 @@ public class Autoassociator
 
 	private void initializeWeights()
 	{
-		for (int i = 0; i < weights.length; i++)
+		for (int i = 1; i < weights.length; i++)
 		{
-			for (int j = 0; j < weights.length; j++)
+			for (int j = 1; j < weights.length; j++)
 			{
 				weights[i][j] = 0;
 			}
@@ -103,7 +104,7 @@ public class Autoassociator
 	private int calculateNextStateOfNeuron(int[] neurons, int i)
 	{
 		int result = 0;
-		for (int j = 0; j < neurons.length; j++)
+		for (int j = 1; j < neurons.length; j++)
 		{
 			result += (weights[i][j] * neurons[j]);
 		}

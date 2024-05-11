@@ -16,6 +16,8 @@ public class TimeTable extends JFrame implements ActionListener
 	private CourseArray courses;
 
 	private Color CRScolor[] = {Color.RED, Color.GREEN, Color.BLACK};
+
+	private Autoassociator autoassociator = null;
 	
 	public TimeTable() 
 	{
@@ -93,6 +95,11 @@ public class TimeTable extends JFrame implements ActionListener
 				int slots = Integer.parseInt(field[0].getText());
 				courses = new CourseArray(Integer.parseInt(field[1].getText()) + 1, slots);
 				courses.readClashes(field[2].getText());
+				if (autoassociator == null)
+				{
+					autoassociator = new Autoassociator(courses);
+					System.out.println(autoassociator.getTrainingCapacity());
+				}
 				draw();
 				break;
 			case 1:
@@ -102,7 +109,6 @@ public class TimeTable extends JFrame implements ActionListener
 				{
 					courses.setSlot(i, 0);
 				}
-				
 				for (int iteration = 1; iteration <= Integer.parseInt(field[3].getText()); iteration++) 
 				{
 					courses.iterate(Integer.parseInt(field[4].getText()));
@@ -114,6 +120,8 @@ public class TimeTable extends JFrame implements ActionListener
 						step = iteration;
 					}
 				}
+				trainAssociator(Integer.parseInt(field[0].getText()));
+				System.out.println(autoassociator.getTrainingCapacity());
 				System.out.println("Shift = " + field[4].getText() + "\tMin clashes = " + min + "\tat step " + step);
 				setVisible(true);
 				break;
@@ -133,8 +141,55 @@ public class TimeTable extends JFrame implements ActionListener
 		}
 	}
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		new TimeTable();
+	}
+
+	private void trainAssociator(int numOfTimeSlots)
+	{
+		if (autoassociator.getTrainingCapacity() == 0)
+		{
+			return;
+		}
+		int[] timeSlots = initializeTimeSlotArray(numOfTimeSlots);
+		for (int i = 1; i < courses.length(); i++)
+		{
+			if (doesCourseWithGivenIndexHaveClashes(i))
+			{
+				timeSlots[courses.slot(i)] = -1;
+			}
+		}
+		for (int i = 0; i < timeSlots.length; i++)
+		{
+			if (autoassociator.getTrainingCapacity() == 0)
+			{
+				return;
+			}
+			if (isTimeSlotClashFree(timeSlots[i]))
+			{
+				autoassociator.training(courses.getTimeSlot(timeSlots[i]));
+			}
+		}
+	}
+
+	private int[] initializeTimeSlotArray(int numOfTimeSlots)
+	{
+		int[] timeSlots = new int[numOfTimeSlots];
+		for (int i = 0; i < numOfTimeSlots; i++)
+		{
+			timeSlots[i] = i;
+		}
+		return timeSlots;
+	}
+
+	private boolean doesCourseWithGivenIndexHaveClashes(int index)
+	{
+		return courses.status(index) != 0;
+	}
+
+	private boolean isTimeSlotClashFree(int timeSlot)
+	{
+		return timeSlot != -1;	
 	}
 }
