@@ -39,7 +39,7 @@ public class TimeTable extends JFrame implements ActionListener
 		String capField[] = {"Slots:", "Courses:", "Clash File:", "Iters:", "Shift:"};
 		field = new JTextField[capField.length];
 		
-		String capButton[] = {"Load", "Start", "Step", "Print", "Exit", "Continue"};
+		String capButton[] = {"Load", "Start", "Step", "Print", "Exit", "Continue", "Train"};
 		tool = new JButton[capButton.length];
 		
 		tools.setLayout(new GridLayout(2 * capField.length + capButton.length, 1));
@@ -120,8 +120,6 @@ public class TimeTable extends JFrame implements ActionListener
 						step = iteration;
 					}
 				}
-				trainAssociator(Integer.parseInt(field[0].getText()));
-				System.out.println(autoassociator.getTrainingCapacity());
 				System.out.println("Shift = " + field[4].getText() + "\tMin clashes = " + min + "\tat step " + step);
 				setVisible(true);
 				break;
@@ -138,6 +136,10 @@ public class TimeTable extends JFrame implements ActionListener
 				break;
 			case 4:
 				System.exit(0);
+				break;
+			case 6:
+				trainAssociator(Integer.parseInt(field[0].getText()));
+				System.out.println(autoassociator.getTrainingCapacity());
 		}
 	}
 
