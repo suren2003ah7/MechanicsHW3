@@ -12,7 +12,7 @@ shift | iteration | result
 25      1000        Min clashes = 248       at step 418
 30      1000        Min clashes = 890       at step 51
 35      1000        Min clashes = 230       at step 182
-40      1000        Min clashes = 190       at step 739 // the best
+40      1000        Min clashes = 190       at step 739
 45      1000        Min clashes = 336       at step 107
 50      1000        Min clashes = 230       at step 863
 55      1000        Min clashes = 224       at step 992
@@ -68,3 +68,53 @@ shift | iteration | result
 50      1000        Min clashes = 286       at step 978
 55      1000        Min clashes = 204       at step 132
 60      1000        Min clashes = 686       at step 897
+
+Update period - 5
+Update count - 5
+shift | iteration | result
+1       1000        Min clashes = 3522      at step 847
+5       1000        Min clashes = 342       at step 287
+10      1000        Min clashes = 226       at step 528
+15      1000        Min clashes = 212       at step 985
+20      1000        Min clashes = 240       at step 850
+25      1000        Min clashes = 202       at step 494
+30      1000        Min clashes = 808       at step 961
+35      1000        Min clashes = 236       at step 715
+40      1000        Min clashes = 180       at step 835
+41      1000        Min clashes = 292       at step 988
+42      1000        Min clashes = 208       at step 639
+45      1000        Min clashes = 200       at step 927
+50      1000        Min clashes = 198       at step 344
+55      1000        Min clashes = 262       at step 145
+60      1000        Min clashes = 800       at step 901
+
+Update period - 1
+Update count - 1
+shift | iteration | result
+1       1000        Min clashes = 3232      at step 661
+5       1000        Min clashes = 344       at step 172
+10      1000        Min clashes = 312       at step 657
+15      1000        Min clashes = 404       at step 871
+20      1000        Min clashes = 230       at step 860
+25      1000        Min clashes = 236       at step 306
+30      1000        Min clashes = 910       at step 913
+35      1000        Min clashes = 246       at step 1000
+40      1000        Min clashes = 160       at step 930 // the best
+45      1000        Min clashes = 238       at step 502
+50      1000        Min clashes = 202       at step 931
+55      1000        Min clashes = 220       at step 484
+60      1000        Min clashes = 782       at step 789
+
+File: sta-f-83
+Time slots: 13
+
+Update period - 1
+Update count - 1
+shift | iteration | result
+1       1000        Min clashes = 0 at step 14 // the worst
+3       1000        Min clashes = 0 at step 6
+5       1000        Min clashes = 0 at step 3
+7       1000        Min clashes = 0 at step 4
+9       1000        Min clashes = 0 at step 2
+11      1000        Min clashes = 0 at step 2
+13      1000        Min clashes = 0 at step 1 // the best

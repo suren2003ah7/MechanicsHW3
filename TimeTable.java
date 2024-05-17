@@ -19,9 +19,9 @@ public class TimeTable extends JFrame implements ActionListener
 
 	private Autoassociator autoassociator = null;
 
-	private static final int UPDATE_PERIOD = 2;
+	private static final int UPDATE_PERIOD = 1;
 
-	private static final int UPDATE_COUNT = 10;
+	private static final int UPDATE_COUNT = 1;
 	
 	public TimeTable() 
 	{
