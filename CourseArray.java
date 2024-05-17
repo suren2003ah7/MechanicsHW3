@@ -4,7 +4,7 @@ import java.util.StringTokenizer;
 public class CourseArray 
 {
 
-	private Course elements[];
+	private Course[] elements;
 
 	private int period;
 	
@@ -40,7 +40,7 @@ public class CourseArray
 			BufferedReader file = new BufferedReader(new FileReader(filename));
 			StringTokenizer line = new StringTokenizer(file.readLine());
 			int count = line.countTokens(), i, j, k;
-			int index[];
+			int[] index;
 			while (count > 0) 
 			{
 				if (count > 1) 

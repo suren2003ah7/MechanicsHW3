@@ -9,13 +9,13 @@ public class TimeTable extends JFrame implements ActionListener
 
 	private JPanel tools = new JPanel();
 
-	private JButton tool[];
+	private JButton[] tool;
 
-	private JTextField field[];
+	private JTextField[] field;
 
 	private CourseArray courses;
 
-	private Color CRScolor[] = {Color.RED, Color.GREEN, Color.BLACK};
+	private Color[] CRScolor = {Color.RED, Color.GREEN, Color.BLACK};
 
 	private Autoassociator autoassociator = null;
 
@@ -40,10 +40,10 @@ public class TimeTable extends JFrame implements ActionListener
 	
 	public void setTools() 
 	{
-		String capField[] = {"Slots:", "Courses:", "Clash File:", "Iters:", "Shift:"};
+		String[] capField = {"Slots:", "Courses:", "Clash File:", "Iters:", "Shift:"};
 		field = new JTextField[capField.length];
 		
-		String capButton[] = {"Load", "Start", "Step", "Print", "Exit", "Continue", "Train"};
+		String[] capButton = {"Load", "Start", "Step", "Print", "Exit", "Continue", "Train"};
 		tool = new JButton[capButton.length];
 		
 		tools.setLayout(new GridLayout(2 * capField.length + capButton.length, 1));
