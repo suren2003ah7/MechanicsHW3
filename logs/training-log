@@ -2,6 +2,7 @@ Author: Suren Hakobyan
 
 File: uta-s-92
 Time slots: 30
+Number of courses: 622
 
 Training (capacity = (int) 0.139 * 622 = 86)
 No. of slots | shift | iteration index | clash-free timeslot indices (from 0 to 29)
@@ -12,6 +13,7 @@ No. of slots | shift | iteration index | clash-free timeslot indices (from 0 to 
 
 File: sta-f-83
 Time slots: 13
+Number of courses: 139
 
 Training (capacity = (int) 0.139 * 139 = 19)
 No. of slots | shift | iteration index | clash-free timeslot indices (from 0 to 12)

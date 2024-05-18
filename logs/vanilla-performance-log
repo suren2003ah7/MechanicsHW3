@@ -2,6 +2,7 @@ Author: Suren Hakobyan
 
 File: uta-s-92
 Time slots: 30
+Number of courses: 622
 
 shift | iteration | result
 1       100         Min clashes = 24038     at step 100
@@ -46,6 +47,7 @@ shift | iteration | result
 
 File: sta-f-83
 Time slots: 13
+Number of courses: 139
 
 shift | iteration | result
 1       100         Min clashes = 0 at step 12
