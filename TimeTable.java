@@ -19,9 +19,9 @@ public class TimeTable extends JFrame implements ActionListener
 
 	private Autoassociator autoassociator = null;
 
-	private static final int UPDATE_PERIOD = 1;
+	private static int updatePeriod;
 
-	private static final int UPDATE_COUNT = 1;
+	private static int updateCount;
 	
 	public TimeTable() 
 	{
@@ -34,13 +34,16 @@ public class TimeTable extends JFrame implements ActionListener
 		
 		setTools();
 		add(tools);
+
+		updatePeriod = 1;
+		updateCount = 1;
 		
 		setVisible(true);
 	}
 	
 	public void setTools() 
 	{
-		String[] capField = {"Slots:", "Courses:", "Clash File:", "Iters:", "Shift:"};
+		String[] capField = {"Slots:", "Courses:", "Clash File:", "Iters:", "Shift:", "Update Period:", "Update Count:"};
 		field = new JTextField[capField.length];
 		
 		String[] capButton = {"Load", "Start", "Step", "Print", "Exit", "Continue", "Train"};
@@ -108,6 +111,8 @@ public class TimeTable extends JFrame implements ActionListener
 				break;
 			case 1:
 				min = Integer.MAX_VALUE;
+				updatePeriod = Integer.parseInt(field[5].getText());
+				updateCount = Integer.parseInt(field[6].getText());
 				step = 0;
 				for (int i = 1; i < courses.length(); i++)
 				{
@@ -123,9 +128,9 @@ public class TimeTable extends JFrame implements ActionListener
 						min = clashes;
 						step = iteration;
 					}
-					if (iteration % UPDATE_PERIOD == 0)
+					if (iteration % updatePeriod == 0)
 					{
-						for (int k = 0; k < UPDATE_COUNT; k++)
+						for (int k = 0; k < updateCount; k++)
 						{
 							executeUnitUpdate();
 						}
